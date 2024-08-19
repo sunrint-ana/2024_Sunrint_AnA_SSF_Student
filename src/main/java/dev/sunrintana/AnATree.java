@@ -13,16 +13,13 @@ import org.json.JSONObject;
 
 import java.util.*;
 
-//@Path("/")
 public class AnATree {
 
     private static final String name = "AnA";
     private static final String password = "abcd";
     private static final List<Gift> gifts = new ArrayList<>();
 
-//    @GET
-//    @Path("/info")
-//    @Produces(MediaType.APPLICATION_JSON)
+
     public String info() {
         return """
                 {
@@ -32,8 +29,7 @@ public class AnATree {
                 """.formatted(name, gifts.size());
     }
 
-//    @POST
-//    @Path("/items")
+
     public Response items(String body) {
         try {
             JSONArray a = new JSONArray();
@@ -53,8 +49,7 @@ public class AnATree {
         }
     }
 
-//    @POST
-//    @Path("/item")
+
     public Response item(String body) {
         if(body != null) {
             try {
